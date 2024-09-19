@@ -6,6 +6,7 @@
 
 test.py
 /backup
+/local
 
 /functions/__pycache__
 /services/__pycache__

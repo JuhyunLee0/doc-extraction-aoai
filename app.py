@@ -13,7 +13,7 @@ from functions.create_highlight import highlight_pdf
 
 # this is static file path, you can change this to a dynamic file path
 file_name = "Zurich-Quote-Teachers page 1-2.pdf"
-file_path = os.path.join(os.getcwd(), "documents", file_name)
+file_path = os.path.join(os.getcwd(), "local", file_name)
 
 
 # Set the page configuration

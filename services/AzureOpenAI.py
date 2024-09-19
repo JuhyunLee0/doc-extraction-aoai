@@ -19,7 +19,7 @@ client = AzureOpenAI(
 def get_response_from_aoai(document_content: str):
     """Get a JSON response from the GPT-4o model with schema"""
 
-    system_prompt_file = os.path.join(os.getcwd(), "documents", "system_prompt-modified.txt")
+    system_prompt_file = os.path.join(os.getcwd(), "local", "system_prompt-modified.txt")
     with open(system_prompt_file, "r") as f:
         system_prompt = f.read()
 

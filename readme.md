@@ -1,6 +1,6 @@
 # Document Extraction with Azure OpenAI
 
-This project leverages Azure OpenAI to perform document extraction. The goal is to efficiently extract and process information from various document formats.
+This project leverages Azure OpenAI to perform document extraction. The goal is to efficiently extract and process information from PDF document formats.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -9,7 +9,7 @@ This project leverages Azure OpenAI to perform document extraction. The goal is 
 - [Running](#running)
 
 ## Introduction
-This project uses Azure OpenAI to extract data from documents. It supports multiple document formats and provides a streamlined process for data extraction.
+This project uses Azure OpenAI to extract data from documents.
 
 ## Features
 - Supports PDF various document.

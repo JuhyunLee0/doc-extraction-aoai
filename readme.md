@@ -1,6 +1,6 @@
 # Document Extraction with Azure OpenAI
 
-This project leverages Azure OpenAI to perform document extraction. The goal is to efficiently extract and process information from PDF document formats.
+This project leverages Azure OpenAI to perform document extraction. The goal is to efficiently extract and process information from PDF document formats. and highlight the extraction orgin.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -12,9 +12,8 @@ This project leverages Azure OpenAI to perform document extraction. The goal is 
 This project uses Azure OpenAI to extract data from documents.
 
 ## Features
-- Supports PDF various document.
+- Supports PDF document.
 - Utilizes Azure OpenAI for accurate data extraction
-- Easy to integrate into existing workflows
 
 ## Installation
 To install the necessary dependencies, run:
@@ -29,4 +28,4 @@ streamlit run app.py
 ```
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.

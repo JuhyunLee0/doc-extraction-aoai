@@ -6,6 +6,4 @@ python-dotenv
 pandas
 azure-core
 azure-ai-documentintelligence
-pillow
-python-Levenshtein
 pypdf

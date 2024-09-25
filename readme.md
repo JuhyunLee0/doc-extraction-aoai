@@ -16,6 +16,8 @@ This project uses Azure OpenAI to extract data from documents.
 - Utilizes Azure OpenAI for accurate data extraction
 
 ## Installation
+Requires python 3.11 or above
+
 To install the necessary dependencies, run:
 ```bash
 pip install -r requirements.txt

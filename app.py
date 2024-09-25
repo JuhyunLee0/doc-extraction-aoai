@@ -12,12 +12,12 @@ from functions.get_data import get_data, get_test_data
 from functions.create_highlight import highlight_pdf
 
 # this is static file path, you can change this to a dynamic file path
-file_name = "Zurich-Quote-Teachers page 1-2.pdf"
+file_name = os.getenv("TARGET_FILE_NAME")
 file_path = os.path.join(os.getcwd(), "local", file_name)
 
 
 # Set the page configuration
-st.set_page_config(page_title="AOAI DocIntel Validator", layout="wide")
+st.set_page_config(page_title="Doc Intel Highlight", layout="wide")
 
 # loading data from various azure doc intel resources and azure openai
 def load_data(file_path):
@@ -68,6 +68,16 @@ with col2:
                 highlighted_file_path = file_path
             st.session_state['highlighted_file_path'] = highlighted_file_path
             st.rerun()
+
+    st.markdown("---")
+
+    if selected_field:
+        print(selected_field)
+        st.header("Field Details")
+        st.write(f"Field Name: {selected_field_name}")
+        st.write(f"Value: {selected_field['layer_1']}")
+        st.write(f"Extraction From: {selected_field['extraction_from']}")
+
 
 st.markdown("---")
 

@@ -19,29 +19,3 @@ def highlight_pdf(file_path, target_text):
     doc.save(output_path)
     doc.close()
     return output_path
-
-    
-# Function to highlight text in IMG with a red box
-def highlight_img(file_path, highlight_coords):
-    # Open the PNG image
-    image = Image.open(file_path)
-    
-    # Create a drawing context
-    draw = ImageDraw.Draw(image)
-    
-    # Iterate over the highlight coordinates
-    for highlight in highlight_coords:
-        polygon = highlight['polygon']
-        
-        # Convert polygon to rectangle
-        x0, y0, x1, y1 = polygon[0], polygon[1], polygon[4], polygon[5]
-        
-        # Draw a rectangle with a semi-transparent fill
-        draw.rectangle([x0, y0, x1, y1], outline="red", width=4)
-    
-    # get file type from the file path
-    file_type = file_path.split(".")[-1]
-
-    output_png_path = os.path.join(os.getcwd(), "documents", f"temp.{file_type}")
-    image.save(output_png_path)
-    return output_png_path

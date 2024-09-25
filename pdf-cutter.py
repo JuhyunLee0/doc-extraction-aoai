@@ -1,6 +1,12 @@
 import pypdf
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
+
+filename = os.getenv("TARGET_FILE_NAME")
+
 def extract_first_two_pages(input_pdf_path, output_pdf_path):
     # Open the input PDF file
     with open(input_pdf_path, 'rb') as input_pdf_file:
@@ -18,6 +24,8 @@ def extract_first_two_pages(input_pdf_path, output_pdf_path):
             writer.write(output_pdf_file)
 
 # Example usage
-input_pdf_path = os.path.join(os.getcwd(), "documents", "Zurich-Quote-Teachers.pdf")
-output_pdf_path = os.path.join(os.getcwd(), "documents", "Zurich-Quote-Teachers page 1-2.pdf")
+input_pdf_path = os.path.join(os.getcwd(), "local", filename)
+# create new file name with 1-2 at the end
+out_put_file_name = filename.split(".")[0] + " 1-2.pdf"
+output_pdf_path = os.path.join(os.getcwd(), "local", out_put_file_name)
 extract_first_two_pages(input_pdf_path, output_pdf_path)
